@@ -338,3 +338,4 @@ $RECYCLE.BIN/
 *.lnk
 tmp
 my.cnf
+passenger_wsgi.py
