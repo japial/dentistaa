@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'py@$x7e6c#c)(3imfcy^!*ws5%ef+m3!z(r4j=+7kq1p@@1oh!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['dentistaa.com', 'www.dentistaa.com']
 
