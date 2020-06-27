@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'py@$x7e6c#c)(3imfcy^!*ws5%ef+m3!z(r4j=+7kq1p@@1oh!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['dentistaa.com', 'www.dentistaa.com']
 
@@ -125,3 +125,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/dentaiqr/public_html/static'
 MEDIA_ROOT = '/home/dentaiqr/public_html/media'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

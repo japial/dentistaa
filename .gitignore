@@ -1,3 +1,8 @@
+tmp
+my.cnf
+passenger_wsgi.py
+local_settings.py
+.idea
 
 ### Django ###
 *.log
@@ -336,6 +341,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-tmp
-my.cnf
-passenger_wsgi.py
