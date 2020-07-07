@@ -3,5 +3,5 @@ from django.shortcuts import render
 
 
 def index(request: HttpRequest):
-    return render(request, 'coming.html')
+    return render(request, 'landing.html')
 
