@@ -8,6 +8,7 @@ class Doctor(models.Model):
     nid = models.CharField(max_length=30)
     email = models.CharField(max_length=60)
     password = models.CharField(max_length=160)
+    approved = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -42,3 +43,39 @@ class Treatment(models.Model):
     class Meta:
         verbose_name_plural = 'Treatments'
 
+
+class Chamber(models.Model):
+    name = models.CharField(max_length=100)
+    address = models.TextField(default=None)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Chambers'
+
+
+class ChamberDoctor(models.Model):
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    chamber = models.ForeignKey(Chamber, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class ChamberPhoto(models.Model):
+    photo = models.CharField(max_length=60)
+    chamber = models.ForeignKey(Chamber, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class ChamberTreatment(models.Model):
+    treatment = models.ForeignKey(Treatment, on_delete=models.CASCADE)
+    chamber = models.ForeignKey(Chamber, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name_plural = 'Chamber Treatments'
