@@ -1,0 +1,1048 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+	background: url("../images/background.png");
+	background-size: cover;
+}
+
+.logojar{
+
+	position: absolute;
+	height: 200px;
+	width: 400px;
+	left: 35%;
+	top: 2%;
+
+}
+
+.logo{
+
+	position: absolute;
+	height: 100px;
+	width: 400px;
+}
+
+.logotext{
+
+	position: absolute;
+	font-size: 20px;
+	top: 100px;
+	left: 60px;
+	color: #bfc1c3;
+	cursor: default;
+}
+
+.infobox{
+	position: absolute;
+	background-color: white;
+	height: 2000px;
+	width: 90%;
+	top: 200px;
+	left: 5%;
+	box-shadow: 0 20px 20px rgba(1,0,0,.5);
+	border-radius: 10px;
+
+}
+
+.piicon{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 425px;
+	top: 20px;
+}
+
+.pitext{
+	position: absolute;
+	left: 375px;
+	top: 70px;
+	font-size: 15px;
+	cursor: default;
+}
+
+.ppbox{
+	height: 50px;
+	width: 50px;
+	position: relative;
+	border: 2px solid #4dd7c4;
+	border-radius: 50%;
+	background: url('../images/profile.png');
+	background-size: 100% 100%;
+	overflow: hidden;
+	top: 120px;
+	left: 425px;
+	box-shadow: 0 2px 2px rgba(1,0,0,.5);
+}
+
+.ppicture{
+	position: absolute;
+	outline: none;
+	color: transparent;
+	left: -2px;
+	top: -2px;
+	width: 110%;
+	height: 110%;
+	padding: 10px 10px;
+	cursor: pointer;
+	transition: 0.5s;
+	background: rgba(1,0,0,.5);
+	opacity: 0;
+}
+
+.ppicture::-webkit-file-upload-button{
+	visibility: hidden;
+}
+
+.ppicture::before{
+	font-size: 50px;
+	color: #4dd7c4;
+	display: inline-block;
+	-webkit-user-select: none;
+}
+
+.ppicture::after{
+	position: absolute;
+	content: 'Upload';
+	font-weight: bold;
+	color: #4dd7c4;
+	display: block;
+	font-size: 20px;
+	top: 20px;
+	left: 10px;
+}
+
+.ppicture:hover{
+	opacity: 1;
+}
+
+.infobox input{
+	position: absolute;
+	font-size: 15px;
+	border-radius: 10px;
+	outline: none;
+	border: 2px solid #e2e6ea;
+	padding: 10px 5px;
+}
+
+.PIname{
+	width: 650px;
+	top: 190px;
+	left: 100px;
+}
+
+.PInumber{
+	width: 650px;
+	top: 240px;
+	left: 100px;
+}
+
+.PIemail{
+	width: 650px;
+	top: 290px;
+	left: 100px;
+}
+
+
+.PInid{
+	width: 650px;
+	top: 340px;
+	left: 100px;
+}
+
+.PIbmdc{
+	width: 650px;
+	top: 390px;
+	left: 100px;
+	cursor: pointer;
+}
+
+.PIbmdc::-webkit-file-upload-button{
+	border-radius: 5px;
+	border: #bfc1c3 ;
+	outline: none;
+	background-color: rgba(0,0.2,3,0.1);
+	cursor: pointer;
+}
+
+.PIpassword{
+	width: 650px;
+	top: 440px;
+	left: 100px;
+}
+.PIrepassword{
+	width: 650px;
+	top: 490px;
+	left: 100px;
+}
+
+.ciicon{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 425px;
+	top: 540px;
+}
+
+.citext{
+	position: absolute;
+	left: 400px;
+	top: 570px;
+	font-size: 15px;
+	cursor: default;
+}
+
+.CIname{
+	width: 650px;
+	top: 610px;
+	left: 100px;
+}
+
+.CIaddress{
+	width: 650px;
+	top: 660px;
+	left: 100px;
+}
+
+.citext1{
+	position: absolute;
+	left: 375px;
+	top: 690px;
+	font-size: 15px;
+	cursor: default;
+}
+
+.checkbox{
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	top: 740px ;
+}
+
+.treatment1{
+	left: 100px;
+	cursor: pointer;
+}
+.treatment1text{
+	position: absolute;
+	left: 120px;
+	top: -12px;
+	cursor: default;
+}
+
+.treatment2{
+	left: 100px;
+	top: 50px;
+	cursor: pointer;
+}
+.treatment2text{
+	position: absolute;
+	left: 120px;
+	top: 38px;
+	cursor: default;
+}
+
+.treatment3{
+	left: 250px;
+	cursor: pointer;
+}
+.treatment3text{
+	position: absolute;
+	left: 270px;
+	top: -12px;
+	cursor: default;
+}
+
+.treatment4{
+	left: 250px;
+	top: 50px;
+	cursor: pointer;
+}
+.treatment4text{
+	position: absolute;
+	left: 270px;
+	top: 38px;
+	cursor: default;
+}
+
+.treatment5{
+	left: 400px;
+	cursor: pointer;
+}
+.treatment5text{
+	position: absolute;
+	left: 420px;
+	top: -12px;
+	cursor: default;
+}
+
+.treatment6{
+	left: 400px;
+	top: 50px;
+	cursor: pointer;
+}
+.treatment6text{
+	position: absolute;
+	left: 420px;
+	top: 38px;
+	cursor: default;
+}
+
+.treatment7{
+	left: 550px;
+	cursor: pointer;
+}
+.treatment7text{
+	position: absolute;
+	left: 570px;
+	top: -12px;
+	cursor: default;
+}
+
+.treatment8{
+	left: 550px;
+	top: 50px;
+	cursor: pointer;
+}
+.treatment8text{
+	position: absolute;
+	left: 570px;
+	top: 38px;
+	cursor: default;
+}
+
+.addimgbox1{
+	height: 50px;
+	width: 50px;
+	position: relative;
+	border: 2px solid #4dd7c4;
+	border-radius: 10px;
+	background: url('../images/profile.png');
+	background-size: 100% 100%;
+	overflow: hidden;
+	top: 780px;
+	left: 100px;
+	box-shadow: 0 2px 2px rgba(1,0,0,.5);
+}
+
+.addimg1{
+	opacity: 0;
+}
+
+.addimg1::-webkit-file-upload-button{
+	visibility: hidden;
+}
+
+.addimgbox2{
+	height: 50px;
+	width: 50px;
+	position: relative;
+	border: 2px solid #4dd7c4;
+	border-radius: 10px;
+	background: url('walpaper.jpg');
+	background-size: 100% 100%;
+	overflow: hidden;
+	top: 727px;
+	left: 160px;
+	box-shadow: 0 2px 2px rgba(1,0,0,.5);
+}
+
+.addimg2{
+	opacity: 0;
+}
+
+.addimg2::-webkit-file-upload-button{
+	visibility: hidden;
+}
+
+.addchamberbtn{
+	position: absolute;
+	top: 900px;
+	left: 100px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	color: white;
+	background-color: #4dd7c4;
+	border: none;
+	outline: none;
+}
+
+.pinfoicon{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 425px;
+	top: 980px;
+}
+
+.pinfotext{
+	position: absolute;
+	left: 380px;
+	top: 1020px;
+	font-size: 15px;
+	cursor: default;
+}
+
+.PInfoBMDC{
+	width: 650px;
+	top: 1070px;
+	left: 100px;
+}
+
+.PInfoBMDCcopy{
+	width: 650px;
+	top: 1120px;
+	left: 100px;
+	cursor: pointer;
+}
+
+.PInfoBMDCcopy::-webkit-file-upload-button{
+	border-radius: 5px;
+	border: #bfc1c3 ;
+	outline: none;
+	background-color: rgba(0,0.2,3,0.1);
+	cursor: pointer;
+}
+
+.pinfotext1{
+	position: absolute;
+	left: 380px;
+	top: 1150px;
+	font-size: 15px;
+	cursor: default;
+}
+
+.PInfoinstitute{
+	width:650px;
+	top: 1190px;
+	left: 100px;
+}
+
+.PInfospeciality{
+	width: 650px;
+	top: 1240px;
+	left: 100px;
+}
+
+.Pinfostartdate{
+	width: 190px;
+	top: 1290px;
+	left: 100px;
+}
+
+.Pinfoenddate{
+	width: 190px;
+	top: 1290px;
+	left: 310px;
+}
+
+.addexpbtn{
+	position: absolute;
+	top: 1340px;
+	left: 100px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	color: white;
+	background-color: #4dd7c4;
+	border: none;
+	outline: none;
+}
+
+.eqicon{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 425px;
+	top: 1400px;
+}
+
+.eqtext{
+	position: absolute;
+	left: 350px;
+	top: 1440px;
+	font-size: 15px;
+	cursor: default;
+}
+
+.eqdegree{
+	width: 650px;
+	top: 1480px;
+	left: 100px;
+}
+
+.eqinstitute{
+	width: 650px;
+	top: 1530px;
+	left: 100px;
+}
+
+.eqyear{
+	width: 650px;
+	top: 1580px;
+	left: 100px;
+}
+
+.eqcertificate{
+	width: 190px;
+	height: 60px;
+	top: 1630px;
+	left: 100px;
+	cursor: pointer;
+}
+
+.eqcertificate::-webkit-file-upload-button{
+	position: absolute;
+	border-radius: 5px;
+	left: 50px;
+	top: 10px;
+	padding: 5px 5px;
+	border: #bfc1c3 ;
+	outline: none;
+	background-color: rgba(0,0.2,3,0.1);
+	cursor: pointer;
+}
+
+.eqtestimony{
+	width: 190px;
+	height: 60px;
+	top: 1630px;
+	left: 310px;
+	cursor: pointer;
+}
+
+.eqtestimony::-webkit-file-upload-button{
+	position: absolute;
+	border-radius: 5px;
+	left: 50px;
+	top: 10px;
+	padding: 5px 5px;
+	border: #bfc1c3 ;
+	outline: none;
+	background-color: rgba(0,0.2,3,0.1);
+	cursor: pointer;
+}
+
+.adddegreebtn{
+	position: absolute;
+	top: 1700px;
+	left: 100px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	color: white;
+	background-color: #4dd7c4;
+	border: none;
+	outline: none;
+}
+
+.agree{
+	left: 100px;
+	top: 1740px;
+	cursor: pointer;
+}
+.agreetext{
+	position: absolute;
+	font-size: 15px;
+	font-weight: bold;
+	left: 125px;
+	top: 1726px;
+	cursor: default;
+}
+
+.signupbtn{
+	position: absolute;
+	top: 1770px;
+	left: 400px;
+	font-weight: bold;
+	padding: 10px 30px;
+	border-radius: 5px;
+	color: white;
+	background-color: #818d9b;
+	border: none;
+	outline: none;
+}
+
+@media only screen and (min-width: 768px){
+
+	.logojar{
+		left: 32%;
+	}
+	
+	.infobox{
+		width: 800px;
+		left: 11%;
+	}
+	
+	.piicon{
+		left: 375px;
+	}
+	
+	.pitext{
+		left: 325px;
+	}
+	
+	.ppbox{
+		left: 375px;
+	}
+	
+	.PIname{
+		left: 75px;
+	}
+	
+	.PInumber{
+		left: 75px;
+	}
+	
+	.PIemail{
+		left: 75px;
+	}
+	
+	
+	.PInid{
+		left: 75px;
+	}
+	
+	.PIbmdc{
+		left: 75px;
+	}
+	
+	.PIpassword{
+		left: 75px;
+	}
+	
+	.PIrepassword{
+		left: 75px;
+	}
+	
+	.ciicon{
+		left: 375px;
+	}
+	
+	.citext{
+		left: 350px;
+	}
+	
+	.CIname{
+		left: 75px;
+	}
+	
+	.CIaddress{
+		left: 75px;
+	}
+	
+	.citext1{
+		left: 325px;
+	}
+	
+	.checkbox{
+		left: 0px;
+	}
+	
+	.addimgbox1{
+		left: 100px;
+	}
+	
+	.addimgbox2{
+		left: 160px;
+	}
+	
+	.addchamberbtn{
+		left: 100px;
+	}
+	
+	.pinfoicon{
+		left: 375px;
+	}
+	
+	.pinfotext{
+		left: 325px;
+	}
+	
+	.PInfoBMDC{
+		left: 75px;
+	}
+	
+	.PInfoBMDCcopy{
+		left: 75px;
+	}
+	
+	.pinfotext1{
+		left: 325px;
+	}
+	
+	.PInfoinstitute{
+		left: 75px;
+	}
+	
+	.PInfospeciality{
+		left: 75px;
+	}
+	
+	.Pinfostartdate{
+		left: 75px;
+	}
+	
+	.Pinfoenddate{
+		left: 535px;
+	}
+	
+	.addexpbtn{
+		left: 75px;
+	}
+	
+	.eqicon{
+		left: 375px;
+	}
+	
+	.eqtext{
+		left: 300px;
+	}
+	
+	.eqdegree{
+		left: 75px;
+	}
+	
+	.eqinstitute{
+		left: 75px;
+	}
+	
+	.eqyear{
+		left: 75px;
+	}
+	
+	.eqcertificate{
+		left: 75px;
+	}
+	
+	.eqtestimony{
+		left: 535px;
+	}
+	
+	.adddegreebtn{
+		left: 75px;
+	}
+	
+	.agree{
+		left: 75px;
+	}
+	.agreetext{
+		left: 100px;
+	
+	}
+	
+	.signupbtn{
+		left: 350px;
+	}
+	
+	}
+
+@media only screen and (min-width: 1025px){
+
+	.logojar{
+		left: 36%;
+	}
+	.infobox{
+		width: 600px;
+		top: 200px;
+		left: 27%;
+	}
+	
+	.piicon{
+		left: 275px;
+		top: 20px;
+	}
+	
+	.pitext{
+		left: 225px;
+		top: 70px;
+	}
+	
+	.ppbox{
+		top: 120px;
+		left: 275px;
+	}
+
+	.ppicture::after{
+		font-size: 10px;
+	}
+	
+	.infobox input{
+		padding: 8px 5px;
+	}
+	
+	.PIname{
+		width: 400px;
+		top: 190px;
+		left: 100px;
+	}
+	
+	.PInumber{
+		width: 400px;
+		top: 230px;
+		left: 100px;
+	}
+	
+	.PIemail{
+		width: 400px;
+		top: 270px;
+		left: 100px;
+	}
+	
+	
+	.PInid{
+		width: 400px;
+		top: 310px;
+		left: 100px;
+	}
+	
+	.PIbmdc{
+		width: 400px;
+		top: 350px;
+		left: 100px;
+	}
+	
+	.PIpassword{
+		width: 400px;
+		top: 390px;
+		left: 100px;
+	}
+
+	.PIrepassword{
+		width: 400px;
+		top: 430px;
+		left: 100px;
+	}
+	
+	.ciicon{
+		left: 275px;
+		top: 520px;
+	}
+	
+	.citext{
+		left: 250px;
+		top: 560px;
+	}
+	
+	.CIname{
+		width: 400px;
+		top: 610px;
+		left: 100px;
+	}
+	
+	.CIaddress{
+		width: 400px;
+		top: 650px;
+		left: 100px;
+	}
+	
+	.citext1{
+		left: 225px;
+		top: 690px;
+	}
+	
+	.checkbox{
+		top: 740px ;
+	}
+	
+	.treatment1{
+		left: 100px;
+	}
+	.treatment1text{
+		left: 120px;
+		top: -12px;
+	}
+	
+	.treatment2{
+		left: 100px;
+		top: 50px;
+	}
+	.treatment2text{
+		left: 120px;
+		top: 38px;
+	}
+	
+	.treatment3{
+		left: 200px;
+	}
+	.treatment3text{
+		left: 220px;
+		top: -12px;
+	}
+	
+	.treatment4{
+		left: 200px;
+		top: 50px;
+	}
+	.treatment4text{
+		left: 220px;
+		top: 38px;
+	}
+	
+	.treatment5{
+		left: 300px;
+	}
+	.treatment5text{
+		left: 320px;
+		top: -12px;
+	}
+	
+	.treatment6{
+		left: 300px;
+		top: 50px;
+	}
+	.treatment6text{
+		left: 320px;
+		top: 38px;
+	}
+	
+	.treatment7{
+		left: 400px;
+	}
+	.treatment7text{
+		left: 420px;
+		top: -12px;
+	}
+	
+	.treatment8{
+		left: 400px;
+		top: 50px;
+	}
+	.treatment8text{
+		left: 420px;
+		top: 38px;
+	}
+	
+	.addimgbox1{
+		top: 780px;
+		left: 100px;
+	}
+	
+	.addimgbox2{
+		top: 727px;
+		left: 160px;
+	}
+	
+	
+	.addchamberbtn{
+		top: 900px;
+		left: 100px;
+	}
+	
+	.pinfoicon{
+		left: 275px;
+		top: 980px;
+	}
+	
+	.pinfotext{
+		left: 225px;
+		top: 1020px;
+	}
+	
+	.PInfoBMDC{
+		width: 400px;
+		top: 1070px;
+		left: 100px;
+	}
+	
+	.PInfoBMDCcopy{
+		width: 400px;
+		top: 1110px;
+		left: 100px;
+	}
+	
+	.pinfotext1{
+		left: 225px;
+		top: 1150px;
+	}
+	
+	.PInfoinstitute{
+		width: 400px;
+		top: 1190px;
+		left: 100px;
+	}
+	
+	.PInfospeciality{
+		width: 400px;
+		top: 1230px;
+		left: 100px;
+	}
+	
+	.Pinfostartdate{
+		width: 190px;
+		top: 1270px;
+		left: 100px;
+	}
+	
+	.Pinfoenddate{
+		width: 190px;
+		top: 1270px;
+		left: 310px;
+	}
+	
+	.addexpbtn{
+		top: 1310px;
+		left: 100px;
+	}
+	
+	.eqicon{
+		left: 275px;
+		top: 1400px;
+	}
+	
+	.eqtext{
+		left: 200px;
+		top: 1440px;
+	}
+	
+	.eqdegree{
+		width: 400px;
+		top: 1480px;
+		left: 100px;
+	}
+	
+	.eqinstitute{
+		width: 400px;
+		top: 1520px;
+		left: 100px;
+	}
+	
+	.eqyear{
+		width: 400px;
+		top: 1560px;
+		left: 100px;
+	}
+	
+	.eqcertificate{
+		width: 190px;
+		height: 60px;
+		top: 1600px;
+		left: 100px;
+	}
+	
+	.eqtestimony{
+		width: 190px;
+		height: 60px;
+		top: 1600px;
+		left: 310px;
+	}
+		
+	.adddegreebtn{
+		top: 1670px;
+		left: 100px;
+	}
+	
+	.agree{
+		left: 100px;
+		top: 1710px;
+	}
+	.agreetext{
+		left: 125px;
+		top: 1696px;
+	}
+	
+	.signupbtn{
+		top: 1770px;
+		left: 250px;
+	}
+	
+
+}

@@ -1,22 +1,96 @@
-<!doctype html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'doctors/css/style.css' %}">
 
     <title>Dentistaa - Dentist Registration</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+</head>
+<body>
+<div class="logojar">
+    <img class="logo" src="{% static 'doctors/images/logo.png' %}">
+    <p class="logotext">
+        Dentist Registration From
+    </p>
+</div>
+<div class="infobox">
+    <div class="PIbox">
+        <img class="piicon" src="{% static 'doctors/images/icon/personalinformation.png' %}">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+        <p class="pitext">
+            Personal Information
+        </p>
+
+        <div class="ppbox">
+            <input type="file" class="ppicture">
+        </div>
+
+        <input class="PIname" type="text" placeholder="Your Full Name" name="" value="">
+        <input class="PInumber" type="number" placeholder="Phone Number" name="" value="">
+        <input class="PIemail" type="text" placeholder="your@gmail.com" name="" value="">
+        <input class="PInid" type="number" placeholder="NID No." name="" value="">
+        <input class="PIbmdc" type="file" placeholder="Upload BMDC Registration Copy" name="" value="">
+        <input class="PIpassword" type="number" placeholder="Password" name="" value="">
+        <input class="PIrepassword" type="number" placeholder="Re-password" name="" value="">
+
+    </div>
+    <div class="CIbox">
+        <img class="ciicon" src="{% static 'doctors/images/icon/chemberinfo.png' %}">
+
+        <p class="citext">
+            Chamber Info
+        </p>
+
+        <input class="CIname" type="text" placeholder="Chamber Name" name="" value="">
+        <input class="CIaddress" type="text" placeholder="Address" name="" value="">
+
+        <p class="citext1">
+            Available Treatments
+        </p>
+
+        <form class="checkbox">
+            <label>Treatment
+                <input class="Treatment1" type="checkbox" name="" value="">
+            </label>
+        </form>
+    </div>
+    <div class="PInfobox">
+        <img class="pinfoicon" src="{% static 'doctors/images/icon/personalinformation.png' %}">
+
+        <p class="pinfotext">
+            Professional Info
+        </p>
+
+        <input class="PInfoBMDC" type="number" placeholder="BMDC Registration No." name="" value="">
+        <input class="PInfoBMDCcopy" type="file" placeholder="Upload BMDC Registration Copy" name="" value="">
+        <p class="pinfotext1">
+            Work Experience
+        </p>
+        <input class="PInfoinstitute" type="text" placeholder="Name Of The Institute" name="" value="">
+        <input class="PInfospeciality" type="text" placeholder="Speciality" name="" value="">
+    </div>
+    <div class="EQbox">
+        <img class="eqicon" src="{% static 'doctors/images/icon/educationalqualification.png' %}">
+
+        <p class="eqtext">
+            Educational Qualification
+        </p>
+
+        <input class="eqdegree" type="text" placeholder="Name Of The Degree" name="" value="">
+        <input class="eqinstitute" type="text" placeholder="Name Of The Institute" name="" value="">
+        <input class="eqyear" type="text" placeholder="Year Of Passing" name="" value="">
+
+        <input class="eqcertificate" type="file" placeholder="Upload Certificate" name="" value="">
+        <input class="eqtestimony" type="file" placeholder="Upload Testimony" name="" value="">
+
+        <input class="agree" type="checkbox" name="" value="">
+        <p class="agreetext">I accept the <a href="#">terms of use</a> and <a href="#">privacy policy</a></p>
+        <button class="signupbtn"> Sign Up</button>
+    </div>
+</div>
+</body>
 </html>
