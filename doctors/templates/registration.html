@@ -1,96 +1,45 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="{% static 'doctors/css/style.css' %}">
-
-    <title>Dentistaa - Dentist Registration</title>
-</head>
-<body>
-<div class="logojar">
-    <img class="logo" src="{% static 'doctors/images/logo.png' %}">
-    <p class="logotext">
-        Dentist Registration From
-    </p>
-</div>
+{% block page_title %}
+Dentist Registration From
+{% endblock %}
+{% block content %}
 <div class="infobox">
-    <div class="PIbox">
-        <img class="piicon" src="{% static 'doctors/images/icon/personalinformation.png' %}">
-
-        <p class="pitext">
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+        <img class="box-icon" src="{% static 'doctors/images/icon/personalinformation.png' %}">
+        <p class="box-text">
             Personal Information
         </p>
 
         <div class="ppbox">
             <input type="file" class="ppicture">
         </div>
+        {% for field in user_form %}
+            {{ field }}
+            {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+            {% endfor %}
+        {% endfor %}
 
-        <input class="PIname" type="text" placeholder="Your Full Name" name="" value="">
-        <input class="PInumber" type="number" placeholder="Phone Number" name="" value="">
-        <input class="PIemail" type="text" placeholder="your@gmail.com" name="" value="">
-        <input class="PInid" type="number" placeholder="NID No." name="" value="">
-        <input class="PIbmdc" type="file" placeholder="Upload BMDC Registration Copy" name="" value="">
-        <input class="PIpassword" type="number" placeholder="Password" name="" value="">
-        <input class="PIrepassword" type="number" placeholder="Re-password" name="" value="">
-
-    </div>
-    <div class="CIbox">
-        <img class="ciicon" src="{% static 'doctors/images/icon/chemberinfo.png' %}">
-
-        <p class="citext">
-            Chamber Info
-        </p>
-
-        <input class="CIname" type="text" placeholder="Chamber Name" name="" value="">
-        <input class="CIaddress" type="text" placeholder="Address" name="" value="">
-
-        <p class="citext1">
-            Available Treatments
-        </p>
-
-        <form class="checkbox">
-            <label>Treatment
-                <input class="Treatment1" type="checkbox" name="" value="">
+        <input class="box-input" type="text" placeholder="Phone Number" name="" value="">
+        <input class="box-input" type="number" placeholder="NID No." name="" value="">
+        <div class="label-input">
+            <label>NID Card Photo</label>
+            <input class="box-input-file" type="file" placeholder="Upload BMDC Registration Copy" name="" value="">
+        </div>
+        <input class="box-input" type="number" placeholder="BMDC Registration No." name="" value="">
+        <div class="label-input">
+            <label>BMDC Reg. Photo</label>
+            <input class="box-input-file" type="file" placeholder="Upload BMDC Registration Copy" name="" value="">
+        </div>
+        <div class="agreement">
+            <label for="agree">
+                <input type="checkbox" value="1" name="agree" id="agree" required>
+                <span>I accept the <a href="#" target="_blank">terms of use</a> and <a href="#" target="_blank">privacy policy</a></span>
             </label>
-        </form>
-    </div>
-    <div class="PInfobox">
-        <img class="pinfoicon" src="{% static 'doctors/images/icon/personalinformation.png' %}">
-
-        <p class="pinfotext">
-            Professional Info
-        </p>
-
-        <input class="PInfoBMDC" type="number" placeholder="BMDC Registration No." name="" value="">
-        <input class="PInfoBMDCcopy" type="file" placeholder="Upload BMDC Registration Copy" name="" value="">
-        <p class="pinfotext1">
-            Work Experience
-        </p>
-        <input class="PInfoinstitute" type="text" placeholder="Name Of The Institute" name="" value="">
-        <input class="PInfospeciality" type="text" placeholder="Speciality" name="" value="">
-    </div>
-    <div class="EQbox">
-        <img class="eqicon" src="{% static 'doctors/images/icon/educationalqualification.png' %}">
-
-        <p class="eqtext">
-            Educational Qualification
-        </p>
-
-        <input class="eqdegree" type="text" placeholder="Name Of The Degree" name="" value="">
-        <input class="eqinstitute" type="text" placeholder="Name Of The Institute" name="" value="">
-        <input class="eqyear" type="text" placeholder="Year Of Passing" name="" value="">
-
-        <input class="eqcertificate" type="file" placeholder="Upload Certificate" name="" value="">
-        <input class="eqtestimony" type="file" placeholder="Upload Testimony" name="" value="">
-
-        <input class="agree" type="checkbox" name="" value="">
-        <p class="agreetext">I accept the <a href="#">terms of use</a> and <a href="#">privacy policy</a></p>
-        <button class="signupbtn"> Sign Up</button>
-    </div>
+        </div>
+        <button class="box-button" type="submit">Save</button>
+    </form>
 </div>
-</body>
-</html>
+{% endblock %}

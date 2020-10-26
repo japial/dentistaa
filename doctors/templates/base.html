@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'doctors/css/style.css' %}">
+
+    <title>Dentistaa - Dentist Registration</title>
+</head>
+<body>
+<div class="logojar">
+    <a href="/">
+        <img class="logo" src="{% static 'doctors/images/logo.png' %}">
+    </a>
+    <p class="logotext">
+          {% block page_title %}{% endblock %}
+    </p>
+</div>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>

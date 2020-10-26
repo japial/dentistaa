@@ -1,7 +1,6 @@
-from django.http import HttpRequest
+from django.http import HttpRequest, JsonResponse, HttpResponse
 from django.shortcuts import render, redirect
-from .forms import RegistrationForm
-from django.contrib.auth import authenticate
+from .forms import UserSignUpForm
 
 
 def index(request: HttpRequest):
@@ -9,16 +8,16 @@ def index(request: HttpRequest):
 
 
 def register(request: HttpRequest):
-    form = RegistrationForm(request.POST)
-    if form.is_valid():
-        form.save()
-        username = form.cleaned_data.get('username')
-        password = form.cleaned_data.get('password1')
-        user = authenticate(username=username, password=password)
-        return redirect('doctors/success')
+    user_form = UserSignUpForm(request.POST)
+    if user_form.is_valid():
+        user = user_form.save()
+        user.refresh_from_db()
+        user.is_active = False
+        user.save()
+        return redirect('/doctors/success')
     else:
-        form = RegistrationForm()
-    return render(request, 'registration.html', {'form': form})
+        user_form = UserSignUpForm()
+    return render(request, 'registration.html', {'user_form': user_form})
 
 
 def success(request: HttpRequest):

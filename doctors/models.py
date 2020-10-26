@@ -1,13 +1,16 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
 class Doctor(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     photo = models.CharField(max_length=60)
     phone = models.CharField(max_length=20)
     nid = models.CharField(max_length=30)
-    email = models.CharField(max_length=60)
-    password = models.CharField(max_length=160)
+    nid_photo = models.CharField(max_length=30)
+    bmdc = models.CharField(max_length=30)
+    bmdc_photo = models.CharField(max_length=30)
     approved = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
